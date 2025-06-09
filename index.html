@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Replace with your project description -->
+  <meta name="description" content="Project Description">
+  <!-- Replace with your project keywords -->
+  <meta name="keywords" content="Keyword1, Keyword2, Keyword3">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Replace with your project title -->
+  <title>OpenDance</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- Remove this section if you don't use Google Analytics, or replace G-PYVRSFMDRL with your own ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <!-- You might need to remove or simplify bulma-carousel.min.css and bulma-slider.min.css if not used -->
+  <!-- <link rel="stylesheet" href="./static/css/bulma-carousel.min.css"> -->
+  <!-- <link rel="stylesheet" href="./static/css/bulma-slider.min.css"> -->
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <!-- You might need to modify or simplify index.css -->
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- Replace with your own favicon -->
+  <!-- <link rel="icon" href="./static/images/favicon_placeholder.svg"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <!-- If you don't need custom scripts from bulma-carousel.min.js, bulma-slider.min.js, or index.js, you can remove or replace them -->
+  <!-- <script src="./static/js/bulma-carousel.min.js"></script> -->
+  <!-- <script src="./static/js/bulma-slider.min.js"></script> -->
+  <!-- <script src="./static/js/index.js"></script> -->
+</head>
+<body>
+
+<!-- Project Title and Authors -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <!-- Replace with your project title -->
+          <h1 class="title is-1 publication-title">OpenDance: Multimodal Controllable 3D Dance Generation Using Large-scale Internet Data</h1>
+          <div class="is-size-5 publication-authors">
+            <!-- Replace with your authors -->
+            <span class="author-block">Anonymous Submission</span>
+            <!-- <br>
+            <span class="author-block">(Paper and Code in our submission)</span> -->
+            
+          </div>
+            <!-- You can add more links here (e.g., project page, demo) -->
+            <!--
+            <span class="link-block">
+              <a href="YOUR_PROJECT_PAGE_LINK" target="_blank"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon"><i class="fas fa-globe"></i></span>
+                <span>Project Page</span>
+              </a>
+            </span>
+            -->
+          </div>
+        </div>
+      <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="#"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="#"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video (Coming...)</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="#"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- BibTeX Link. -->
+              <span class="link-block">
+                <a href="#BibTeX"
+                  class="button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-code"></i>
+                  </span>
+                  <span>BibTeX</span>
+                </a>
+              </span>
+            </div>
+      </div>
+  </div>
+</section>
+
+
+<!-- Teaser Image -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- Replace with your teaser image -->
+      <img src="./static/images/teaser.png" alt="Project Teaser Image"
+           style="width:100%; max-width:800px; display:block; margin-left:auto; margin-right:auto; border-radius: 10px;"/>
+      <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
+        <!-- Replace with a one-sentence description of your project -->
+        Overview of the OpenDance.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<!-- Abstract -->
+<section class="hero is-light is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <br>
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Music-driven dance generation offers significant creative potential yet faces considerable challenges. The absence of fine-grained multimodal data and the difficulty of flexible multi-conditional generation limit previous works on generation controllability and diversity in practice. In this paper, we build OpenDance5D, an extensive human dance dataset comprising over 101 hours across 14 distinct genres. Each sample has five modalities to facilitate robust cross-modal learning: RGB video, audio, 2D keypoints, 3D motion, and fine-grained textual descriptions from human arts. Furthermore, we propose OpenDanceNet, a unified masked modeling framework for controllable dance generation conditioned on music and arbitrary combinations of text prompts, keypoints, or character positioning. Comprehensive experiments demonstrate that OpenDanceNet achieves high-fidelity and flexible controllability.
+
+          </p>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <br>
+        <h2 class="title is-3">OpenDance5D Dataset</h2>
+        <div class="content has-text-justified"></div>
+        <!-- Replace with your teaser image -->
+        <img src="./static/images/data_dist.png" alt="Project Teaser Image"
+            style="width:100%; max-width:800px; display:block; margin-left:auto; margin-right:auto; border-radius: 10px;"/>
+        <div class="content has-text-justified">
+            <p>Data Distribution of OpenDance5D in terms of (a) dancers and (b) genres. The violin plot shows the number of samples per dancer in raw video data, while the sunburst chart illustrates the distribution of samples across 14 dance genres.</p>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <br>
+        <h2 class="title is-3">OpenDanceNet</h2>
+        <div class="content has-text-justified"></div>
+        <!-- Replace with your teaser image -->
+        <img src="./static/images/method.png" alt="Project Teaser Image"
+           style="width:100%; max-width:800px; display:block; margin-left:auto; margin-right:auto; border-radius: 10px;"/>
+        <div class="content has-text-justified">
+            <p>
+              The masked modeling based dance generation framework OpenDanceNet. 
+              During training, we input multiple user-customized conditions to generate controllable dance results. 
+              The transformer-based diffusion network is employed as body diffuser and hand diffuser, respectively.
+            </p>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Video -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Dataset Demos</h2>
+        <div>
+          <video controls muted preload="metadata" playsinline width="100%">
+            <source src="./static/video/0.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>
+            Visualization case #1
+          </p>
+          <br>
+          <video controls muted preload="metadata" playsinline width="100%">
+            <source src="./static/video/1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>
+            Visualization case #2
+          </p>
+          <br>
+          <video controls muted preload="metadata" playsinline width="100%">
+            <source src="./static/video/2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>
+            Visualization case #3
+          </p>
+          <br>
+          <video controls muted preload="metadata" playsinline width="100%">
+            <source src="./static/video/3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>
+            Visualization case #4
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Generation Performance -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Generation Performance</h2>
+        Coming soon...
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+      
+    </code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        <!-- You can add copyright information or acknowledgements here -->
+        Website template based on the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies project page</a>.
+      </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
