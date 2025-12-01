@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Replace with your project description -->
+  <meta name="description" content="Project Description">
+  <!-- Replace with your project keywords -->
+  <meta name="keywords" content="Keyword1, Keyword2, Keyword3">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Replace with your project title -->
+  <title>OpenDance</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- Remove this section if you don't use Google Analytics, or replace G-PYVRSFMDRL with your own ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <!-- You might need to remove or simplify bulma-carousel.min.css and bulma-slider.min.css if not used -->
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <!-- You might need to modify or simplify index.css -->
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- Replace with your own favicon -->
+  <link rel="icon" href="./static/images/logo.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <!-- If you don't need custom scripts from bulma-carousel.min.js, bulma-slider.min.js, or index.js, you can remove or replace them -->
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<!-- Project Title and Authors -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <!-- Replace with your project title -->
+          <h1 class="title is-1 publication-title"> 
+            <img src="./static/images/logo.jpg" alt="Icon" style="width: 10%; height: auto; vertical-align:baseline; margin-right: 10px;">
+            OpenDance: Multimodal Controllable 3D Dance Generation with Large-scale Internet Data
+          </h1>
+          <div class="is-size-5 publication-authors">
+            <!-- Replace with your authors -->
+            <span class="author-block">Anonymous Submission</span>
+            <!-- <br>
+            <span class="author-block">(Paper and Code in our submission)</span> -->
+            
+          </div>
+            <!-- You can add more links here (e.g., project page, demo) -->
+            <!--
+            <span class="link-block">
+              <a href="YOUR_PROJECT_PAGE_LINK" target="_blank"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon"><i class="fas fa-globe"></i></span>
+                <span>Project Page</span>
+              </a>
+            </span>
+            -->
+          </div>
+        </div>
+      <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="#"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="#"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video (Coming...)</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="#"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (In Supplementary...)</span>
+                  </a>
+              </span>
+              <!-- BibTeX Link. -->
+              <!-- <span class="link-block">
+                <a href="#BibTeX"
+                  class="button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-code"></i>
+                  </span>
+                  <span>BibTeX</span>
+                </a>
+              </span> -->
+            </div>
+      </div>
+  </div>
+</section>
+
+
+<!-- Teaser Image -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- Replace with your teaser image -->
+      <img src="./static/images/teaser.png" alt="Project Teaser Image"
+           style="width:100%; max-width:800px; display:block; margin-left:auto; margin-right:auto; border-radius: 10px;"/>
+      <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
+        <!-- Replace with a one-sentence description of your project -->
+        We collect a multi-modal large-scale human dance dataset <b>OpenDanceSet</b> and develop the <b>OpenDanceNet</b> for controllable and flexible multimodal generation conditioned on any "Music+X" condition combination (X: 2D keypoints, global position, and fine-grained text prompts).
+      </h2>
+    </div>
+  </div>
+</section>
+
+<!-- Abstract -->
+<section class="hero is-light is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <br>
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Music-driven 3D dance generation offers significant creative potential, yet practical applications demand versatile and multimodal control. As the highly dynamic and complex human motion covering various styles and genres, dance generation requires satisfying diverse conditions beyond just music (e.g., spatial trajectories, keyframe gestures, or style descriptions). However, the absence of a large-scale and richly annotated dataset severely hinders progress. In this paper, we build OpenDanceSet, an extensive human dance dataset comprising over 100 hours across 14 genres and 147 subjects. Each sample has rich annotations to facilitate robust cross-modal learning: 3D motion, paired music, 2D keypoints, trajectories, and expert-annotated text descriptions. Furthermore, we propose OpenDanceNet, a unified masked modeling framework for controllable dance generation, including a disentangled auto-encoder and a multimodal joint-prediction Transformer. OpenDanceNet supports generation conditioned on music and arbitrary combinations of text, keypoints, or trajectories. Comprehensive experiments demonstrate that our work achieves high-fidelity synthesis with strong diversity and realistic physical contacts, while also offering flexible control over spatial and stylistic conditions.
+
+          </p>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <br>
+        <h2 class="title is-3">OpenDanceSet Dataset</h2>
+        <div class="content has-text-justified"></div>
+        <!-- Replace with your teaser image -->
+        <img src="./static/images/data_dist.png" alt="Project Teaser Image"
+            style="width:100%; max-width:800px; display:block; margin-left:auto; margin-right:auto; border-radius: 10px;"/>
+        <div class="content has-text-justified">
+            <p>Data Distribution of OpenDanceSet in terms of (a) dancers and (b) genres. The violin plot shows the number of samples per dancer in raw video data, while the sunburst chart illustrates the distribution of samples across 14 dance genres.</p>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <br>
+        <h2 class="title is-3">OpenDanceNet</h2>
+        <div class="content has-text-justified"></div>
+        <!-- Replace with your teaser image -->
+        <img src="./static/images/method.png" alt="Project Teaser Image"
+           style="width:100%; max-width:800px; display:block; margin-left:auto; margin-right:auto; border-radius: 10px;"/>
+        <div class="content has-text-justified">
+            <p>
+              The masked modeling based dance generation framework OpenDanceNet. 
+              During training, we input multiple user-customized conditions to generate controllable dance results. 
+              The transformer-based diffusion network is employed as body diffuser and hand diffuser, respectively.
+            </p>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Dataset Demos -->
+<section class="hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <br>
+        <h2 class="title is-3">Dataset Demos</h2>
+        <div>
+          <video controls muted preload="metadata" playsinline width="100%">
+            <source src="./static/video/0.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>
+            Visualization case #1
+          </p>
+          <br>
+          <video controls muted preload="metadata" playsinline width="100%">
+            <source src="./static/video/1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>
+            Visualization case #2
+          </p>
+          <br>
+          <video controls muted preload="metadata" playsinline width="100%">
+            <source src="./static/video/2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>
+            Visualization case #3
+          </p>
+          <br>
+          <video controls muted preload="metadata" playsinline width="100%">
+            <source src="./static/video/3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>
+            Visualization case #4
+          </p>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Dataset Quality Comparison -->
+<section class="section is-light">
+  <div class="container is-fluid" style="width: 100%; padding: 0 2rem;">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Dataset Quality Comparison</h2>
+        <p>Side-by-side comparison between AIST++ and OpenDance samples.</p>
+      </div>
+    </div>
+
+    <div class="columns is-multiline is-centered has-text-centered">
+      <div class="column is-half">
+        <h3 class="title is-4">AIST++</h3>
+        <div id="comparison-aist-carousel" class="carousel results-carousel">
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" width="100%">
+                <source src="./static/video/compare_aist_opendance/aist/gBR_sBM_cAll_d04_mBR1_ch07_slice0.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" width="100%">
+                <source src="./static/video/compare_aist_opendance/aist/gBR_sBM_cAll_d05_mBR1_ch09_slice0.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" width="100%">
+                <source src="./static/video/compare_aist_opendance/aist/gHO_sBM_cAll_d19_mHO0_ch06_slice0.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" width="100%">
+                <source src="./static/video/compare_aist_opendance/aist/gHO_sBM_cAll_d19_mHO2_ch04_slice0.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" width="100%">
+                <source src="./static/video/compare_aist_opendance/aist/gJB_sBM_cAll_d08_mJB4_ch09_slice0.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" width="100%">
+                <source src="./static/video/compare_aist_opendance/aist/gJS_sFM_cAll_d01_mJS2_ch03_slice0.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" width="100%">
+                <source src="./static/video/compare_aist_opendance/aist/gMH_sBM_cAll_d24_mMH4_ch08_slice0.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" width="100%">
+                <source src="./static/video/compare_aist_opendance/aist/gMH_sFM_cAll_d22_mMH4_ch05_slice0.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-half">
+        <h3 class="title is-4">OpenDanceSet</h3>
+        <div id="comparison-opendance-carousel" class="carousel results-carousel">
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" width="100%">
+                <source src="./static/video/compare_aist_opendance/opendance/00001_slice3.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" width="100%">
+                <source src="./static/video/compare_aist_opendance/opendance/00016_slice1.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" width="100%">
+                <source src="./static/video/compare_aist_opendance/opendance/00027_slice2.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" width="100%">
+                <source src="./static/video/compare_aist_opendance/opendance/00028_slice4.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" width="100%">
+                <source src="./static/video/compare_aist_opendance/opendance/00030_slice8.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" width="100%">
+                <source src="./static/video/compare_aist_opendance/opendance/00060_slice3.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" width="100%">
+                <source src="./static/video/compare_aist_opendance/opendance/00064_slice1.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" width="100%">
+                <source src="./static/video/compare_aist_opendance/opendance/00306_slice4.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" width="100%">
+                <source src="./static/video/compare_aist_opendance/opendance/00861_slice6.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" width="100%">
+                <source src="./static/video/compare_aist_opendance/opendance/00975_slice10.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Multimodal Controllability -->
+
+<!-- Generation Control Showcase -->
+<section class="section is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Condition-Controlled Generation (Watch in Full Screen)</h2>
+        <p>Comparison between full multimodal control and keypoints-only guidance.</p>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-half-desktop is-full-tablet">
+        <h3 class="title is-4">Music + All Controls</h3>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="slider-item"><div class="item"><video controls muted loop playsinline preload="metadata" width="100%"><source src="./static/video/generation-control-full/00001_slice1_motion.mp4" type="video/mp4"></video></div></div>
+          <div class="slider-item"><div class="item"><video controls muted loop playsinline preload="metadata" width="100%"><source src="./static/video/generation-control-full/00166_slice5_motion.mp4" type="video/mp4"></video></div></div>
+          <div class="slider-item"><div class="item"><video controls muted loop playsinline preload="metadata" width="100%"><source src="./static/video/generation-control-full/00460_slice14_motion.mp4" type="video/mp4"></video></div></div>
+          <div class="slider-item"><div class="item"><video controls muted loop playsinline preload="metadata" width="100%"><source src="./static/video/generation-control-full/02058_slice11_motion.mp4" type="video/mp4"></video></div></div>
+          <div class="slider-item"><div class="item"><video controls muted loop playsinline preload="metadata" width="100%"><source src="./static/video/generation-control-full/02627_slice0_motion.mp4" type="video/mp4"></video></div></div>
+          <div class="slider-item"><div class="item"><video controls muted loop playsinline preload="metadata" width="100%"><source src="./static/video/generation-control-full/02681_slice6_motion.mp4" type="video/mp4"></video></div></div>
+          <div class="slider-item"><div class="item"><video controls muted loop playsinline preload="metadata" width="100%"><source src="./static/video/generation-control-full/02695_slice6_motion.mp4" type="video/mp4"></video></div></div>
+          <div class="slider-item"><div class="item"><video controls muted loop playsinline preload="metadata" width="100%"><source src="./static/video/generation-control-full/02715_slice0_motion.mp4" type="video/mp4"></video></div></div>
+          <div class="slider-item"><div class="item"><video controls muted loop playsinline preload="metadata" width="100%"><source src="./static/video/generation-control-full/06807_slice3_motion.mp4" type="video/mp4"></video></div></div>
+          <div class="slider-item"><div class="item"><video controls muted loop playsinline preload="metadata" width="100%"><source src="./static/video/generation-control-full/06813_slice4_motion.mp4" type="video/mp4"></video></div></div>
+          <div class="slider-item"><div class="item"><video controls muted loop playsinline preload="metadata" width="100%"><source src="./static/video/generation-control-full/08904_slice32_motion.mp4" type="video/mp4"></video></div></div>
+          <div class="slider-item"><div class="item"><video controls muted loop playsinline preload="metadata" width="100%"><source src="./static/video/generation-control-full/11945_slice15_motion.mp4" type="video/mp4"></video></div></div>
+        </div>
+      </div>
+
+      <div class="column is-half-desktop is-full-tablet">
+        <h3 class="title is-4">Music + Keypoints Only</h3>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="slider-item"><div class="item"><video controls muted loop playsinline preload="metadata" width="100%"><source src="./static/video/generation-control-kpts/00001_slice1_motion.mp4" type="video/mp4"></video></div></div>
+          <div class="slider-item"><div class="item"><video controls muted loop playsinline preload="metadata" width="100%"><source src="./static/video/generation-control-kpts/01451_slice13_motion.mp4" type="video/mp4"></video></div></div>
+          <div class="slider-item"><div class="item"><video controls muted loop playsinline preload="metadata" width="100%"><source src="./static/video/generation-control-kpts/02796_slice6_motion.mp4" type="video/mp4"></video></div></div>
+          <div class="slider-item"><div class="item"><video controls muted loop playsinline preload="metadata" width="100%"><source src="./static/video/generation-control-kpts/06075_slice30_motion.mp4" type="video/mp4"></video></div></div>
+          <div class="slider-item"><div class="item"><video controls muted loop playsinline preload="metadata" width="100%"><source src="./static/video/generation-control-kpts/06612_slice6_motion.mp4" type="video/mp4"></video></div></div>
+          <div class="slider-item"><div class="item"><video controls muted loop playsinline preload="metadata" width="100%"><source src="./static/video/generation-control-kpts/06630_slice5_motion.mp4" type="video/mp4"></video></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop has-text-centered" style="max-width: 70%; margin: 0 auto;">
+    <h2 class="title is-3" style="text-align: center;">Multimodal Condition Controllability</h2>
+    <p><b>🎵 Videos with music (sound on) 🎵 </b></p>
+    <div class="columns is-centered has-text-centered">
+      <div class="column" style="width: 50%;">
+        <p>Music only</p>
+        <br>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" height="100%">
+                <source src="./static/video/control/music0.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" height="100%">
+                <source src="./static/video/control/music1-1.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" height="100%">
+                <source src="./static/video/control/music2.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column" style="width: 50%;">
+        <p>Music + All Conditions</p>
+        <br>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" height="100%">
+                <source src="./static/video/control/all0.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" height="100%">
+                <source src="./static/video/control/all1.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" height="100%">
+                <source src="./static/video/control/all0.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column" style="width: 50%;">
+        <p>Music + Kpts2D</p>
+        <br>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" height="100%">
+                <source src="./static/video/control/kpts0.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" height="100%">
+                <source src="./static/video/control/kpts1.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" height="100%">
+                <source src="./static/video/control/kpts2.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" height="100%">
+                <source src="./static/video/control/kpts3.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="column" style="width: 50%;">
+        <p>Music + Global Position</p>
+        <br>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" height="100%">
+                <source src="./static/video/control/gp0.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" height="100%">
+                <source src="./static/video/control/gp1.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" height="100%">
+                <source src="./static/video/control/gp0.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="title is-3">Music + User-defined Signals</h2>
+    <p><b></b>(More demos coming soon...)</b></p>
+    <p><b>🎵 Videos with music (sound on) 🎵 </b></p>
+    <div class="columns is-centered has-text-centered">
+      <div class="column" style="width: 50%;">
+        <p>Straight Line (Input: start + end positions)</p>
+        <br>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" height="100%">
+                <source src="./static/video/control/straight0.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" height="100%">
+                <source src="./static/video/control/straight1.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" height="100%">
+                <source src="./static/video/control/straight0.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="column" style="width: 50%;">
+        <p>Circle Line (Input: start position, radius, and center)</p>
+        <br>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" height="100%">
+                <source src="./static/video/control/circle0.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" height="100%">
+                <source src="./static/video/control/circle1.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" height="100%">
+                <source src="./static/video/control/circle0.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column" style="width: 225%;">
+        <h2 class="title is-3">Different Characters Dance Now</h2>
+        <p><b>🎵 Videos with music (sound on) 🎵 </b></p>
+        <br>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" height="100%">
+                <source src="./static/video/retarget0-0.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" height="100%">
+                <source src="./static/video/retarget1-0.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" height="100%">
+                <source src="./static/video/retarget2-0.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" height="100%">
+                <source src="./static/video/retarget3-0.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" height="100%">
+                <source src="./static/video/retarget0-1.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Generation Demos -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column" style="width: 150%;">
+        <h2 class="title is-3">OpenDanceNet Generation Demos</h2>
+        <p><b>🎵 Videos with music (sound on) 🎵 </b></p>
+        <br>
+        <p>(trained on <b>OpenDanceSet</b> dataset, <b style="color:green;">with</b> multimodal condition)</p>
+        <br>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" height="100%">
+                <source src="./static/video/generation-opendance5d/3-1.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" height="100%">
+                <source src="./static/video/generation-opendance5d/4-1.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" height="100%">
+                <source src="./static/video/generation-opendance5d/5-1.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" height="100%">
+                <source src="./static/video/generation-opendance5d/2-1.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" height="100%">
+                <source src="./static/video/generation-opendance5d/1-1.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column" style="width: 150%;">
+        <p>(trained on <b>AIST++</b> dataset, <b style="color:red;">without</b> multimodal condition)</p>
+        <br>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" height="100%">
+                <source src="./static/video/generation-aistpp/1.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" height="100%">
+                <source src="./static/video/generation-aistpp/2.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" height="100%">
+                <source src="./static/video/generation-aistpp/3.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" height="100%">
+                <source src="./static/video/generation-aistpp/4.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="item">
+              <video controls muted loop playsinline preload="metadata" height="100%">
+                <source src="./static/video/generation-aistpp/5.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- BibTeX -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        <!-- You can add copyright information or acknowledgements here -->
+        Website template based on the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies project page</a>.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  bulmaCarousel.attach('#results-carousel', {
+      slidesToScroll: 1,
+      slidesToShow: 2,
+      infinite: true,
+      autoplay: false,
+  });
+</script>
+
+</body>
+</html>
